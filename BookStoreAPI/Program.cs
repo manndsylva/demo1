@@ -17,6 +17,13 @@ builder.Services.AddDbContext<BookStoreContext>
     (opts => opts.UseSqlServer(builder.Configuration.GetConnectionString
     ("BookConnectionString")));
 
+//Cors
+
+builder.Services.AddCors(opts =>{ opts.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -26,7 +33,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
