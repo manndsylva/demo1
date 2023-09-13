@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MannDsylva\\source\\repos\\BookStoreAPI\\BookStoreAPI\\BookStoreAPI.csproj": {}
+    "C:\\Users\\MannDsylva\\Source\\Repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MannDsylva\\source\\repos\\BookStoreAPI\\BookStoreAPI\\BookStoreAPI.csproj": {
+    "C:\\Users\\MannDsylva\\Source\\Repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MannDsylva\\source\\repos\\BookStoreAPI\\BookStoreAPI\\BookStoreAPI.csproj",
+        "projectUniqueName": "C:\\Users\\MannDsylva\\Source\\Repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj",
         "projectName": "BookStoreAPI",
-        "projectPath": "C:\\Users\\MannDsylva\\source\\repos\\BookStoreAPI\\BookStoreAPI\\BookStoreAPI.csproj",
+        "projectPath": "C:\\Users\\MannDsylva\\Source\\Repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj",
         "packagesPath": "C:\\Users\\MannDsylva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MannDsylva\\source\\repos\\BookStoreAPI\\BookStoreAPI\\obj\\",
+        "outputPath": "C:\\Users\\MannDsylva\\Source\\Repos\\demo1\\BookStoreAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
