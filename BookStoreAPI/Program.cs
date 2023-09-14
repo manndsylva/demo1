@@ -17,16 +17,13 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 //For Book Store context
 builder.Services.AddDbContext<BookStoreContext>(
-        options => options.UseSqlServer(builder.Configuration.GetConnectionString("BookStoreDB")));
+        options => options.UseSqlServer(builder.Configuration.GetConnectionString("BookConnectionString")));
 
 //Identity
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddUserStore<BookStoreContext>()
+    .AddEntityFrameworkStores<BookStoreContext>()
     .AddDefaultTokenProviders();
 
-/*builder.Services.AddIdentityCore<IdentityRole>()
-    .AddEntityFrameworkStores<BookStoreContext>()
-    .AddDefaultTokenProviders();*/
 //Cors
 builder.Services.AddCors(opts =>
 {
