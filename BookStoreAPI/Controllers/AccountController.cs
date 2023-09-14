@@ -14,16 +14,37 @@ namespace BookStore.API.Controllers
         {
             _accountRepository = accountRepository;
         }
+
         [HttpPost("signup")]
         public async Task<IActionResult> SignUp([FromBody] SignUpModel signUpModel)
         {
             var result = await _accountRepository.SignUpAsync(signUpModel);
+
             if (result.Succeeded)
             {
-                return Unauthorized();
+                // Registration was successful, return a 201 Created status
+                // and optionally include user information in the response
+                var user = await _accountRepository.FindUserByEmailAsync(signUpModel.email);
+                return Created("/api/account/signup", user); // You can customize the response URL
             }
-            return Ok(result.Succeeded);
+
+            // Registration failed, return a 400 Bad Request or 401 Unauthorized status
+            // with an appropriate error message
+            return BadRequest("User registration failed. Please check your input.");
         }
+
+        /*[HttpPost("signup")]
+        public async Task<IActionResult> SignUp([FromBody] SignUpModel signUpModel)
+        {
+            var result = await _accountRepository.SignUpAsync(signUpModel);
+
+            if (result.Succeeded)
+            {
+                return Ok(result.Succeeded);
+            }
+
+            return Unauthorized();
+        }*/
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] SignInModel signInModel)
         {
