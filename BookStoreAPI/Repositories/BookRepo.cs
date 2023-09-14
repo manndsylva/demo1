@@ -1,7 +1,6 @@
 ﻿using BookStoreAPI.Data;
 using BookStoreAPI.Models;
 using Microsoft.EntityFrameworkCore;
-using Azure;
 using AutoMapper;
 
 namespace BookStoreAPI.Repositories

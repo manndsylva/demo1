@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MannDsylva\\Source\\Repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj": {}
+    "C:\\Users\\MannDsylva\\source\\repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MannDsylva\\Source\\Repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj": {
+    "C:\\Users\\MannDsylva\\source\\repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MannDsylva\\Source\\Repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj",
+        "projectUniqueName": "C:\\Users\\MannDsylva\\source\\repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj",
         "projectName": "BookStoreAPI",
-        "projectPath": "C:\\Users\\MannDsylva\\Source\\Repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj",
+        "projectPath": "C:\\Users\\MannDsylva\\source\\repos\\demo1\\BookStoreAPI\\BookStoreAPI.csproj",
         "packagesPath": "C:\\Users\\MannDsylva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MannDsylva\\Source\\Repos\\demo1\\BookStoreAPI\\obj\\",
+        "outputPath": "C:\\Users\\MannDsylva\\source\\repos\\demo1\\BookStoreAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,7 +62,11 @@
               "target": "Package",
               "version": "[7.0.11, )"
             },
-            "Microsoft.AspNetCore.Identity.UI": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.10, )"
             },
@@ -80,25 +84,29 @@
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[7.0.11, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[7.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
