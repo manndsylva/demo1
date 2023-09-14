@@ -20,9 +20,9 @@ namespace BookStore.API.Controllers
             var result = await _accountRepository.SignUpAsync(signUpModel);
             if (result.Succeeded)
             {
-                return Ok(result.Succeeded);
+                return Unauthorized();
             }
-            return Unauthorized();
+            return Ok(result.Succeeded);
         }
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] SignInModel signInModel)

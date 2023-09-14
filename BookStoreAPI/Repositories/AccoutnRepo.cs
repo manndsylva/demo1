@@ -9,13 +9,13 @@ using System.Text;
 
 namespace BookStore.API.Repository
 {
-    public class AccountRepository : IAccountRepo
+    public class AccountRepo : IAccountRepo
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IConfiguration _configuration;
 
-        public AccountRepository(UserManager<ApplicationUser> userManager,
+        public AccountRepo(UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IConfiguration configuration)
         {
@@ -34,22 +34,22 @@ namespace BookStore.API.Repository
                 UserName = signUpModel.email
             };
 
-            return await _userManager.CreateAsync(user, signUpModel.Password??"");
+            return await _userManager.CreateAsync(user, signUpModel.Password);
         }
 
         public async Task<string> LoginAsync(SignInModel signInModel)
         {
-            var result = await _signInManager.PasswordSignInAsync(signInModel.email??"",
-                signInModel.password??"", false, false);
+            var result = await _signInManager.PasswordSignInAsync(signInModel.email,
+                signInModel.password, false, false);
 
             if (!result.Succeeded)
             {
-                return null??"";
+                return null;
             }
 
             var authClaims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, signInModel.email?? ""),
+                new Claim(ClaimTypes.Name, signInModel.email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
             var authSigninKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes

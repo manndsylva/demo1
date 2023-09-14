@@ -8,7 +8,7 @@ namespace BookStoreAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class BookController : ControllerBase
     {
         private readonly IBookRepo bookRepo;
@@ -23,7 +23,7 @@ namespace BookStoreAPI.Controllers
             return Ok(book);
         }
         [HttpGet("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> GetBookById([FromRoute]int Id)
         {
             var book = await bookRepo.GetBookByIdAsync(Id);
@@ -36,7 +36,7 @@ namespace BookStoreAPI.Controllers
             return CreatedAtAction(nameof(GetBookById), new { id = id, controller = "books" }, id);
         }
         [HttpPut("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> UpdateBook([FromBody] BookModel bookModel, [FromRoute] int id)
         {
             await bookRepo.UpdateBookAsync(id, bookModel);
@@ -44,7 +44,7 @@ namespace BookStoreAPI.Controllers
         }
 
         [HttpPatch("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> UpdateBookPatch([FromBody] BookModel bookModel, [FromRoute] int id)
         {
             await bookRepo.UpdateBookPatchAsync(id, bookModel);
@@ -52,7 +52,7 @@ namespace BookStoreAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> DeleteBook([FromRoute] int id)
         {
             await bookRepo.DeleteBookAsync(id);

@@ -1,4 +1,5 @@
 using BookStore.API.Models;
+using BookStore.API.Repository;
 using BookStoreAPI.Data;
 using BookStoreAPI.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -16,6 +17,7 @@ builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IBookRepo, BookRepo>();
+builder.Services.AddScoped<IAccountRepo, AccountRepo>();
 builder.Services.AddAutoMapper(typeof(Program));
 
 //For Book Store context
