@@ -13,11 +13,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddTransient<IBookRepo, BookRepo>();
+builder.Services.AddTransient<IAccountRepo, AccountRepo>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddTransient<IBookRepo, BookRepo>();
-builder.Services.AddScoped<IAccountRepo, AccountRepo>();
+
 builder.Services.AddAutoMapper(typeof(Program));
 
 //For Book Store context

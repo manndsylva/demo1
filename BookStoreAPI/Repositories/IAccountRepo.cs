@@ -9,7 +9,6 @@ namespace BookStoreAPI.Repositories
         Task<IdentityResult> SignUpAsync(SignUpModel signUpModel);
 
         Task<string> LoginAsync(SignInModel signInModel);
-        Task<string> FindUserByEmailAsync(string? email);
     }
     
 }
